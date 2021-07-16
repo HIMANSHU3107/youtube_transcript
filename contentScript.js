@@ -7,7 +7,9 @@ function summarizeVideo(){
     if(res.includes("&list")){
         res = res.split("&list")[0]
     }
-    const URL = "http://127.0.0.1:5000/api/summarize/"+res
+    
+    // http://127.0.0.1:5000/api/summarize/
+    const URL = "https://git.heroku.com/youtube-summary.git/"+res
     console.log(URL)
     // pageRedirect(URL)
     fetch(URL).then((summary)=>{
